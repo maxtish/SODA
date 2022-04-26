@@ -1,0 +1,19 @@
+.header {
+  padding-top: 40px;
+  padding-left: 50px;
+  background-color: $purple;
+
+  &__title {
+    margin: 0 0 40px;
+    width: 87px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $yellow;
+  }
+
+  &__img {
+    width: 783px;
+  }
+}
