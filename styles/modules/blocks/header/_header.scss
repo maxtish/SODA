@@ -1,10 +1,14 @@
 .header {
-  padding-top: 40px;
+  padding-top: 110px;
   padding-left: 50px;
   background-color: $purple;
+  @include flex($direction: row, $align: center, $justify: flex-start);
 
-  &__title {
-    margin: 0 0 40px;
+  &__soda {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    margin: 0;
     width: 87px;
     font-weight: 700;
     font-size: 30px;
@@ -13,7 +17,58 @@
     color: $yellow;
   }
 
+  &__title {
+    margin: 0 0 0 100px;
+
+    width: 457px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   &__img {
     width: 783px;
+    margin-bottom: 50px;
+  }
+
+  &__cricle {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  &__b-cricle {
+    position: absolute;
+    top: -160px;
+    right: -160px;
+    background-color: #3530ff;
+    opacity: 0.2;
+    width: 565px;
+    height: 565px;
+    border-radius: 50%;
+  }
+
+  &__button {
+    margin: 171px 0 0 100px;
+    background-color: $colorBackgroundButton;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: $colorTextButton;
+    transition: 0.5s;
+    margin-left: 15px;
+    border: 2px solid $colorBackgroundButton;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    /* identical to box height, or 172% */
+    letter-spacing: 0.3px;
+    padding: 12px 30px;
+    &:hover {
+      border: 2px solid #1e3264;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
   }
 }
