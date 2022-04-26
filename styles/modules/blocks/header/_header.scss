@@ -1,8 +1,9 @@
 .header {
   padding-top: 110px;
+  padding-bottom: 50px;
   padding-left: 50px;
   background-color: $purple;
-  @include flex($direction: row, $align: center, $justify: flex-start);
+  @include flex($direction: row, $align: flex-end, $justify: flex-start);
 
   &__soda {
     position: absolute;
@@ -28,7 +29,6 @@
 
   &__img {
     width: 783px;
-    margin-bottom: 50px;
   }
 
   &__cricle {
@@ -48,6 +48,9 @@
     border-radius: 50%;
   }
 
+  &__container {
+    @include flex($direction: column, $align: flex-start, $justify: flex-end);
+  }
   &__button {
     margin: 171px 0 0 100px;
     background-color: $colorBackgroundButton;
@@ -57,7 +60,7 @@
     cursor: pointer;
     color: $colorTextButton;
     transition: 0.5s;
-    margin-left: 15px;
+
     border: 2px solid $colorBackgroundButton;
     font-weight: 500;
     font-size: 18px;
@@ -70,5 +73,11 @@
       box-sizing: border-box;
       border-radius: 10px;
     }
+  }
+
+  &__pineapple {
+    position: absolute;
+    top: 604px;
+    left: 758px;
   }
 }
