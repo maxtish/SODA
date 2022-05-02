@@ -4,9 +4,13 @@
   background-color: #fff;
   color: #fff;
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1440px;
 }
 
 .header {
+  max-width: 1440px;
+  position: relative;
+  overflow: hidden;
   padding-top: 110px;
   padding-bottom: 50px;
   padding-left: 50px;
@@ -94,4 +98,138 @@
   position: absolute;
   top: 604px;
   left: 758px;
+}
+
+.streak {
+  position: relative;
+  overflow: hidden;
+  background: #cef564;
+}
+
+.streak__text {
+  width: 2117px;
+  margin: 0 0 0 -100px;
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #016450;
+}
+
+.taste {
+  padding: 120px 0 0;
+}
+
+.taste__title {
+  margin: 0 0 120px;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #1e3264;
+}
+
+.taste__tastes {
+  padding: 90px 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+  background: #9960f6;
+}
+
+.taste__tastes_structure {
+  background: #8556f8;
+}
+
+.taste__left {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.taste__subtitle {
+  margin: 0 0 30px;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 48px;
+}
+
+.taste__paragraph {
+  margin: 0;
+  max-width: 386px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  /* or 172% */
+  letter-spacing: 0.3px;
+}
+
+.taste__img {
+  width: 518px;
+}
+
+.taste__button {
+  border: none;
+  padding: 12px 21px;
+  background: #ffdb00;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+  color: #1e3264;
+  margin-top: auto;
+}
+
+.taste__Ellipse-921 {
+  position: absolute;
+  width: 185px;
+  height: 185px;
+  left: 672px;
+  top: 1784px;
+  background: #e1fd2c;
+  border: 3px solid #016450;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.taste__Ellipse-920 {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  left: 771px;
+  top: 1982px;
+  background: #ffdb00;
+  border: 3px solid #1e3264;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.taste__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.taste__item {
+  width: 255px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
+}
+
+.taste__item:first-of-type {
+  margin-top: 0;
+}
+
+.taste__item-text {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50px;
 }
