@@ -1,0 +1,99 @@
+.samples {
+  background-color: $colorBackgroundSamples;
+  padding: 60px 50px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+
+  &__content {
+    color: $colortext;
+    @include flex($direction: column, $align: $start, $justify: center);
+    align-self: center;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: 0.3px;
+  }
+  &__paragraph {
+    margin: 48px 0 0;
+    width: 457px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.3px;
+  }
+  &__container {
+    width: 693px;
+    background: $colorSamplesForm;
+    padding: 24px 30px 30px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+  }
+  &__input-container {
+    margin: 50px 0 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__input-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+  }
+  &__item {
+    width: 310px;
+    padding: 13px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $white;
+    &:focus {
+      color: #212529;
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      border-bottom: 2px solid $white;
+    }
+    &_width {
+      width: 633px;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 12px 30px;
+    background: #a27bff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    color: $white;
+  }
+
+  &__handlers {
+    margin: 179px 0 0;
+    padding: 0;
+    border: none;
+  }
+}

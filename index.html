@@ -24,6 +24,7 @@
         <img class="header__pineapple" src="./images/pineapple.svg" alt="">
 
     </header>
+
     <main class="content">
 
         <section class="streak">
@@ -38,13 +39,11 @@
                     <h3 class="taste__subtitle">Вкусы</h3>
                     <p class="taste__paragraph">Пейте фрукты, а не газировку со вкусовыми добавками, наши лимонады на
                         100% натуральны!</p>
-
                 </div>
                 <div class="taste__right">
                     <img class="taste__img" src="./images/jarritos-mexican-soda.png" alt="Лимонады">
                 </div>
             </div>
-
             <div class="taste__tastes taste__tastes_structure">
                 <div class="taste__left">
                     <h3 class="taste__subtitle">Состав</h3>
@@ -72,9 +71,49 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="slogan">
+            <h2 class="slogan__title">SODA — натуральные лимонады!</h2>
+            <img class="slogan__img" src="./images/soda-mango.png" alt="Сода-манго">
+            <div class="slogan__nonagon-block">
+                <img class="slogan__nonagon" src="./images/nonagon-mango.svg" alt="манго">
+                <p class="slogan__nonagon-text">МАНГО</p>
+            </div>
+        </section>
+
+        <section class="samples">
+            <div class="samples__content">
+                <h3 class="samples__title">Семплы</h3>
+                <p class="samples__paragraph">Хотите получить семплы каждого вкуса, чтобы понять что нравится вам?
+                    заполните форму!</p>
+            </div>
+
+            <div class="samples__container">
+                <form class="samples__form" id="samples-form" name="samples-form">
+                    <h2 class="samples__title">Семплы</h2>
+
+                    <fieldset class="samples__input-container">
+                        <div class="samples__input-block">
+                            <label class="samples__label" for="name-input">Имя *</label>
+                            <input type="text" class="samples__item" id="name-input" name="name">
+                        </div>
+                        <div class="samples__input-block">
+                            <label class="samples__label" for="surname-input">Фамилия *</label>
+                            <input type="text" class="samples__item" id='surname-input' name="surname">
+                        </div>
+                        <div class="samples__input-block">
+                            <label class="samples__label" for="email-input">Email *</label>
+                            <input type="text" class="samples__item samples__item_width" id='email-input' name="email">
+                        </div>
+                    </fieldset>
 
 
-
+                    <fieldset class="samples__handlers">
+                        <input class="samples__button" type="submit" value="Запросить">
+                    </fieldset>
+                </form>
             </div>
 
 

@@ -1,0 +1,41 @@
+.slogan {
+  position: relative;
+  padding: 70px 180px 0 150px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+
+  &__title {
+    align-self: center;
+    width: 460px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 67px;
+    letter-spacing: 0.3px;
+    color: $colortext;
+  }
+  &__nonagon-block {
+    position: absolute;
+    top: 92px;
+    left: 720px;
+    width: 172px;
+    height: 172px;
+  }
+  &__nonagon {
+    position: relative;
+  }
+  &__nonagon-text {
+    position: absolute;
+
+    top: 50px;
+    left: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #016450;
+
+    transform: rotate(338deg);
+  }
+}

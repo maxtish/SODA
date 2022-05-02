@@ -6,10 +6,16 @@ $yellow: #ffdb00;
 $purple: #9960f6;
 $purple2: #8556f8;
 $colortext: #1e3264;
+$green-s: #cef564;
 
 $colorTextButton: #1e3264;
 $colorBackgroundButton: #ffdb00;
 $primaryColor: $white;
 $secondaryColor: $white;
-$colorBackgroundFresh: #cef564;
+$colorBackgroundFresh: $green-s;
 $colorTextFresh: #016450;
+$start: flex-start;
+$end: flex-end;
+$between: space-between;
+$colorBackgroundSamples: $green-s;
+$colorSamplesForm: #016450;
