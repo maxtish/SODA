@@ -8,6 +8,10 @@
   @include flex($direction: row, $align: flex-end, $justify: flex-start);
   flex-wrap: wrap;
 
+  @include desktopStyles {
+    padding-top: 196px;
+  }
+
   &__soda {
     position: absolute;
     top: 40px;
@@ -23,22 +27,26 @@
 
   &__title {
     margin: 0 0 0 100px;
-    width: 457px;
+    max-width: 457px;
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
 
     @include desktopStyles {
       margin: 0;
+      font-size: 30px;
+      line-height: 38px;
     }
   }
-
+  &__wrapper {
+    position: relative;
+  }
   &__img {
     margin-bottom: 50px;
-    width: 783px;
+    max-width: 783px;
 
     @include desktopStyles {
-      margin-bottom: 126px;
+      width: calc(100vw - 100px);
     }
   }
 
@@ -46,6 +54,10 @@
     position: absolute;
     top: 50px;
     right: 50px;
+
+    @include desktopStyles {
+      width: 128px;
+    }
   }
 
   &__b-cricle {
@@ -57,6 +69,7 @@
     width: 565px;
     height: 565px;
     border-radius: 50%;
+
     @include desktopStyles {
       display: none;
     }
@@ -68,9 +81,10 @@
 
     @include desktopStyles {
       @include flex($direction: row, $align: $start, $justify: $between);
-      width: 100%;
+      width: calc(100vw - 100px);
     }
   }
+
   &__button {
     margin: 171px 0 0 100px;
     background-color: $colorBackgroundButton;
@@ -91,6 +105,7 @@
       box-sizing: border-box;
       border-radius: 10px;
     }
+
     @include desktopStyles {
       margin: 0 0 0 0;
     }
@@ -98,7 +113,12 @@
 
   &__pineapple {
     position: absolute;
-    top: 604px;
-    left: 758px;
+    top: 75%;
+    left: 87%;
+
+    @include desktopStyles {
+      top: 60%;
+      left: 75%;
+    }
   }
 }

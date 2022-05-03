@@ -1,5 +1,6 @@
 .taste {
-  padding: 120px 50px 0;
+  padding: 120px 50px 50px;
+
   &__title {
     margin: 0 0 120px;
     font-weight: 500;
@@ -9,24 +10,35 @@
     letter-spacing: 0.5px;
     color: #1e3264;
   }
+
   &__tastes {
     position: relative;
     padding: 90px 100px;
-    @include flex(
-      $direction: row,
-      $align: space-between,
-      $justify: space-between
-    );
-
+    @include flex($direction: row, $align: $between, $justify: $between);
+    flex-wrap: wrap;
     background: #9960f6;
+
+    @include desktopStyles {
+      padding: 60px;
+    }
 
     &_structure {
       background: #8556f8;
+
+      @include desktopStyles {
+        flex-direction: column;
+      }
     }
   }
+
   &__left {
+    position: relative;
     color: $white;
-    @include flex($direction: column, $align: flex-start, $justify: flex-start);
+    @include flex($direction: column, $align: $start, $justify: $start);
+
+    @include desktopStyles {
+      margin-bottom: 100px;
+    }
   }
 
   &__subtitle {
@@ -36,22 +48,25 @@
     font-size: 52px;
     line-height: 48px;
   }
+
   &__paragraph {
     margin: 0;
+    padding-bottom: 60px;
     max-width: 386px;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 31px;
-    /* or 172% */
-
     letter-spacing: 0.3px;
   }
+
   &__right {
   }
+
   &__img {
     width: 518px;
   }
+
   &__button {
     border: none;
     padding: 12px 21px;
@@ -76,33 +91,43 @@
 
   &__Ellipse-921 {
     position: absolute;
+    top: 33px;
+    left: 45vw;
+
     width: 185px;
     height: 185px;
-    top: 123px;
-    left: 622px;
-
     background: #e1fd2c;
     border: 3px solid #016450;
     box-sizing: border-box;
     border-radius: 50%;
+    @include desktopStyles {
+      top: 240px;
+    }
   }
 
   &__Ellipse-920 {
     position: absolute;
+    top: 231px;
+    left: 50vw;
+
     width: 138px;
     height: 138px;
-    left: 721px;
-    top: 321px;
     background: #ffdb00;
     border: 3px solid #1e3264;
     box-sizing: border-box;
     border-radius: 50%;
+
+    @include desktopStyles {
+      top: 445px;
+    }
   }
+
   &__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
+
   &__item {
     width: 255px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);

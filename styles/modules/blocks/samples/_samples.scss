@@ -2,6 +2,11 @@
   background-color: $colorBackgroundSamples;
   padding: 60px 50px;
   @include flex($direction: row, $align: $start, $justify: $between);
+  flex-wrap: wrap;
+  @include desktopStyles {
+    padding: 60px 34px 34px 34px;
+    margin: 0 50px;
+  }
 
   &__content {
     color: $colortext;
@@ -16,7 +21,7 @@
     letter-spacing: 0.3px;
   }
   &__paragraph {
-    margin: 48px 0 0;
+    margin: 48px 0 100px;
     width: 457px;
     font-weight: 400;
     font-size: 20px;
@@ -24,9 +29,13 @@
     letter-spacing: 0.3px;
   }
   &__container {
-    width: 693px;
+    max-width: 633px;
     background: $colorSamplesForm;
     padding: 24px 30px 30px;
+
+    @include tabletStyles {
+      max-width: 540px;
+    }
   }
   &__title {
     font-weight: 500;
@@ -47,6 +56,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 13px;
+
+    @include tabletStyles {
+      margin: 0;
+    }
 
     &:last-of-type {
       margin-left: 0;
@@ -70,6 +83,11 @@
     background-color: transparent;
     border: none;
     border-bottom: 2px solid $white;
+
+    @include tabletStyles {
+      width: 540px;
+    }
+
     &:focus {
       color: #212529;
       background-color: transparent;
@@ -79,6 +97,9 @@
     }
     &_width {
       width: 633px;
+      @include tabletStyles {
+        width: 540px;
+      }
     }
   }
 
@@ -105,5 +126,8 @@
     margin: 179px 0 0;
     padding: 0;
     border: none;
+    @include tabletStyles {
+      margin-top: 90px;
+    }
   }
 }
