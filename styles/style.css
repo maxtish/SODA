@@ -186,6 +186,16 @@
   letter-spacing: 0.3px;
   color: #1e3264;
   margin-top: auto;
+  transition: 0.5s;
+  border: 2px solid #ffdb00;
+  cursor: pointer;
+}
+
+.taste__button:hover {
+  background: #ffdb00;
+  border: 2px solid #1e3264;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .taste__Ellipse-921 {
