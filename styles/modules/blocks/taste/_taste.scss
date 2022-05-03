@@ -10,6 +10,7 @@
     color: #1e3264;
   }
   &__tastes {
+    position: relative;
     padding: 90px 100px;
     @include flex(
       $direction: row,
@@ -67,8 +68,8 @@
     position: absolute;
     width: 185px;
     height: 185px;
-    left: 672px;
-    top: 1784px;
+    top: 123px;
+    left: 622px;
 
     background: #e1fd2c;
     border: 3px solid #016450;
@@ -80,8 +81,8 @@
     position: absolute;
     width: 138px;
     height: 138px;
-    left: 771px;
-    top: 1982px;
+    left: 721px;
+    top: 321px;
     background: #ffdb00;
     border: 3px solid #1e3264;
     box-sizing: border-box;

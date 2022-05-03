@@ -63,12 +63,10 @@
     cursor: pointer;
     color: $colorTextButton;
     transition: 0.5s;
-
     border: 2px solid $colorBackgroundButton;
     font-weight: 500;
     font-size: 18px;
     line-height: 31px;
-    /* identical to box height, or 172% */
     letter-spacing: 0.3px;
     padding: 12px 30px;
     &:hover {

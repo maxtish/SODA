@@ -1,0 +1,111 @@
+.footer {
+  position: relative;
+  padding: 100px 50px 100px 150px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+  color: $white;
+  background: #7a54f9;
+
+  &__circles {
+  }
+
+  &__b-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 300px;
+    height: 300px;
+    background: #9960f6;
+    border-radius: 50%;
+  }
+
+  &__s-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 230px;
+    height: 230px;
+    background: #5551ff;
+    border-radius: 50%;
+  }
+
+  &__m-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 152px;
+    height: 152px;
+    background: #3530ff;
+    border-radius: 50%;
+  }
+  &__m-circle-text {
+    margin: 0;
+    color: #ffa72b;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &__wrapper {
+    width: 753px;
+    @include flex($direction: row, $align: $start, $justify: $start);
+  }
+
+  &__nav {
+  }
+
+  &__title-nav {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__item-links {
+    color: $white;
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__contacts {
+    margin-left: 145px;
+    @include flex($direction: column, $align: $start, $justify: $start);
+  }
+  &__title-contacts {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__links-contacts {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__copy {
+    position: absolute;
+    bottom: 100px;
+    left: 697px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+  }
+}
