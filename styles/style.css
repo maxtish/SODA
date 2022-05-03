@@ -1,25 +1,32 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/fonts.css);
+/* 
+@include desktopStyles {    
+  }
+*/
+/* 
+@include tabletStyles {    
+  }
+*/
 .page {
   background-color: #fff;
   color: #fff;
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 1440px;
   margin: auto;
 }
 
 .header {
-  max-width: 1440px;
   position: relative;
   overflow: hidden;
   padding-top: 110px;
-  padding-bottom: 50px;
   padding-left: 50px;
+  padding-right: 50px;
   background-color: #9960f6;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .header__soda {
@@ -43,8 +50,21 @@
   line-height: 48px;
 }
 
+@media (max-width: 1460px) {
+  .header__title {
+    margin: 0;
+  }
+}
+
 .header__img {
+  margin-bottom: 50px;
   width: 783px;
+}
+
+@media (max-width: 1460px) {
+  .header__img {
+    margin-bottom: 126px;
+  }
 }
 
 .header__cricle {
@@ -64,11 +84,28 @@
   border-radius: 50%;
 }
 
+@media (max-width: 1460px) {
+  .header__b-cricle {
+    display: none;
+  }
+}
+
 .header__container {
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+}
+
+@media (max-width: 1460px) {
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .header__button {
@@ -92,6 +129,12 @@
   border: 2px solid #1e3264;
   box-sizing: border-box;
   border-radius: 10px;
+}
+
+@media (max-width: 1460px) {
+  .header__button {
+    margin: 0 0 0 0;
+  }
 }
 
 .header__pineapple {
@@ -267,26 +310,27 @@
 }
 
 .slogan__img {
+  position: relative;
   margin-top: 70px;
   z-index: -1;
 }
 
 .slogan__nonagon-block {
+  position: relative;
+}
+
+.slogan__nonagon {
   position: absolute;
-  top: 92px;
-  left: 720px;
+  top: 130px;
+  left: -110px;
   width: 172px;
   height: 172px;
 }
 
-.slogan__nonagon {
-  position: relative;
-}
-
 .slogan__nonagon-text {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 185px;
+  left: -59px;
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
@@ -507,6 +551,7 @@
   font-size: 17px;
   line-height: 28px;
   letter-spacing: 0.3px;
+  text-decoration: none;
 }
 
 .footer__item-links:hover {
@@ -534,6 +579,7 @@
   font-size: 16px;
   line-height: 28px;
   letter-spacing: 0.3px;
+  text-decoration: none;
 }
 
 .footer__links-contacts:hover {

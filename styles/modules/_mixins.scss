@@ -3,7 +3,6 @@
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
-  
 }
 
 @mixin wh($w, $h: $w, $r: 0) {
@@ -16,8 +15,22 @@
 }
 
 @mixin desktopStyles {
-  @media (min-width: 1280px) {
+  @media (max-width: 1460px) {
+    @content;
+  }
+}
+/* 
+@include desktopStyles {    
+  }
+*/
+
+@mixin tabletStyles {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
+/* 
+@include tabletStyles {    
+  }
+*/

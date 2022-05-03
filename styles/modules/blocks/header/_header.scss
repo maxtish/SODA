@@ -1,12 +1,12 @@
 .header {
-  max-width: 1440px;
   position: relative;
   overflow: hidden;
   padding-top: 110px;
-  padding-bottom: 50px;
   padding-left: 50px;
+  padding-right: 50px;
   background-color: $purple;
   @include flex($direction: row, $align: flex-end, $justify: flex-start);
+  flex-wrap: wrap;
 
   &__soda {
     position: absolute;
@@ -23,15 +23,23 @@
 
   &__title {
     margin: 0 0 0 100px;
-
     width: 457px;
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
+
+    @include desktopStyles {
+      margin: 0;
+    }
   }
 
   &__img {
+    margin-bottom: 50px;
     width: 783px;
+
+    @include desktopStyles {
+      margin-bottom: 126px;
+    }
   }
 
   &__cricle {
@@ -49,10 +57,19 @@
     width: 565px;
     height: 565px;
     border-radius: 50%;
+    @include desktopStyles {
+      display: none;
+    }
   }
 
   &__container {
-    @include flex($direction: column, $align: flex-start, $justify: flex-end);
+    margin-bottom: 50px;
+    @include flex($direction: column, $align: $start, $justify: $end);
+
+    @include desktopStyles {
+      @include flex($direction: row, $align: $start, $justify: $between);
+      width: 100%;
+    }
   }
   &__button {
     margin: 171px 0 0 100px;
@@ -73,6 +90,9 @@
       border: 2px solid #1e3264;
       box-sizing: border-box;
       border-radius: 10px;
+    }
+    @include desktopStyles {
+      margin: 0 0 0 0;
     }
   }
 
