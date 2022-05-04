@@ -3,7 +3,7 @@
   overflow: hidden;
   padding-top: 110px;
   padding-left: 50px;
-  padding-right: 50px;
+
   background-color: $purple;
   @include flex($direction: row, $align: flex-end, $justify: flex-start);
 
@@ -100,6 +100,7 @@
     @include flex($direction: column, $align: $start, $justify: $end);
 
     @include desktopStyles {
+      width: calc(100vw - 100px);
       @include flex($direction: row, $align: $start, $justify: $between);
     }
     @include mobileStyles {

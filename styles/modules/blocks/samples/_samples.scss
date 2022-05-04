@@ -130,7 +130,7 @@
       border-bottom: 2px solid $white;
     }
     &_width {
-      max-width: 633px;
+      width: 633px;
       @include desktopStyles {
         width: 70.3vw;
         max-width: 540px;
