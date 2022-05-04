@@ -7,8 +7,15 @@
   @include desktopStyles {
     padding: 120px 50px 150px 50px;
   }
+  @include mobileStyles {
+    @include flex($direction: column, $align: center, $justify: center);
+    padding: 60px 20px 20px;
+  }
 
   &__circles {
+    @include mobileStyles {
+      margin: 50px;
+    }
   }
 
   &__b-circle {
@@ -61,11 +68,18 @@
   &__wrapper {
     width: 753px;
     @include flex($direction: row, $align: $start, $justify: $start);
+    @include mobileStyles {
+      max-width: 753px;
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
   }
 
   &__nav {
     @include desktopStyles {
       margin-left: 100px;
+    }
+    @include mobileStyles {
+      margin: 0;
     }
   }
 
@@ -80,6 +94,9 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    @include mobileStyles {
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
   }
 
   &__item {
@@ -104,6 +121,10 @@
     @include flex($direction: column, $align: $start, $justify: $start);
     @include desktopStyles {
       margin-left: 96px;
+      @include mobileStyles {
+        margin: 50px 0 50px;
+        align-items: center;
+      }
     }
   }
   &__title-contacts {
@@ -136,6 +157,9 @@
     letter-spacing: 0.3px;
     @include desktopStyles {
       bottom: 50px;
+    }
+    @include mobileStyles {
+      position: static;
     }
   }
 }

@@ -4,16 +4,21 @@
   position: relative;
   padding: 0 180px 0 150px;
   @include flex($direction: row, $align: $start, $justify: $between);
-  flex-wrap: wrap;
+
   @include desktopStyles {
     max-height: 910px;
-    justify-content: center;
+
+    @include flex($direction: column, $align: center, $justify: center);
+  }
+  @include mobileStyles {
+    padding: 0 20px 0 20px;
+    max-height: 143vw;
   }
 
   &__title {
     margin: 0;
     align-self: center;
-    width: 460px;
+    max-width: 460px;
     font-weight: 500;
     font-size: 60px;
     line-height: 67px;
@@ -22,6 +27,16 @@
     @include desktopStyles {
       margin-top: 70px;
     }
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  &__wrapper {
+    position: relative;
   }
   &__img {
     position: relative;
@@ -30,30 +45,126 @@
     @include desktopStyles {
       margin-top: 120px;
     }
+    @include mobileStyles {
+      margin-top: 50px;
+      width: 100%;
+    }
   }
   &__nonagon-block {
-    position: relative;
-  }
-  &__nonagon {
     position: absolute;
+    top: 190px;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include desktopStyles {
+      top: 225px;
+      left: -50px;
+    }
+    @include mobileStyles {
+      top: 245px;
+      left: 50px;
+    }
+  }
+
+  &__nonagon {
+    transform: rotate(161.01deg);
+    position: absolute;
+    width: 172px;
+    height: 99.3px;
+    background-color: #cef564;
+    margin: 49.65px 0;
+    border-left: solid 3px #016450;
+    border-right: solid 3px #016450;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 121.62px;
+      height: 121.62px;
+      -webkit-transform: scaleY(0.5774) rotate(-45deg);
+      -ms-transform: scaleY(0.5774) rotate(-45deg);
+      transform: scaleY(0.5774) rotate(-45deg);
+      background-color: inherit;
+      left: 22.1888px;
+    }
+
+    &:before {
+      top: -60.8112px;
+      border-top: solid 4.2426px #016450;
+      border-right: solid 4.2426px #016450;
+    }
+
+    &:after {
+      bottom: -60.8112px;
+      border-bottom: solid 4.2426px #016450;
+      border-left: solid 4.2426px #016450;
+    }
+    @include mobileStyles {
+      position: absolute;
+      width: 98px;
+      height: 56.58px;
+      background-color: #cef564;
+      margin: 28.29px 0;
+      border-left: solid 3px #016450;
+      border-right: solid 3px #016450;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 69.3px;
+        height: 69.3px;
+        -webkit-transform: scaleY(0.5774) rotate(-45deg);
+        -ms-transform: scaleY(0.5774) rotate(-45deg);
+        transform: scaleY(0.5774) rotate(-45deg);
+        background-color: inherit;
+        left: 11.3518px;
+      }
+
+      &:before {
+        top: -34.6482px;
+        border-top: solid 4.2426px #016450;
+        border-right: solid 4.2426px #016450;
+      }
+
+      &:after {
+        bottom: -34.6482px;
+        border-bottom: solid 4.2426px #016450;
+        border-left: solid 4.2426px #016450;
+      }
+    }
+  }
+
+  /* position: absolute;
     top: 130px;
     left: -110px;
     width: 172px;
     height: 172px;
-  }
+    @include mobileStyles {
+      width: 98px;
+      height: 98px;
+      top: 62%;
+      left: 2%;*/
+
   &__nonagon-text {
-    position: absolute;
-    top: 185px;
-    left: -59px;
+    margin: 0;
+    z-index: 1;
+    transform: rotate(-18.99deg);
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #016450;
 
-    transform: rotate(338deg);
+    @include mobileStyles {
+      font-size: 8px;
+      line-height: 9px;
+    }
   }
 }

@@ -1,5 +1,8 @@
 .taste {
   padding: 120px 50px 50px;
+  @include mobileStyles {
+    padding: 50px 20px 20px;
+  }
 
   &__title {
     margin: 0 0 120px;
@@ -9,65 +12,111 @@
     text-align: center;
     letter-spacing: 0.5px;
     color: #1e3264;
+
+    @include mobileStyles {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__tastes {
     position: relative;
     padding: 90px 100px;
-    @include flex($direction: row, $align: $between, $justify: $between);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas:
+      'A B'
+      'A B';
+    justify-content: space-between;
+
     background: #9960f6;
 
     @include desktopStyles {
       padding: 60px;
+      grid-template-areas:
+        'A'
+        'A'
+        'B';
+    }
+
+    @include mobileStyles {
+      padding: 20px;
     }
 
     &_structure {
+      grid-template-areas:
+        'A B'
+        'A B'
+        'C B';
+      justify-content: space-between;
       background: #8556f8;
 
       @include desktopStyles {
-        flex-direction: column;
+        grid-template-areas:
+          'A A'
+          'B B'
+          'C .';
       }
     }
   }
 
   &__left {
+    grid-area: A;
     position: relative;
     color: $white;
     @include flex($direction: column, $align: $start, $justify: $start);
 
     @include desktopStyles {
-      margin-bottom: 100px;
+    }
+    @include mobileStyles {
+      margin-bottom: 0;
     }
   }
 
   &__subtitle {
     margin: 0 0 30px;
-
     font-weight: 600;
     font-size: 52px;
     line-height: 48px;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+      margin-bottom: 14px;
+    }
   }
 
   &__paragraph {
     margin: 0;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     max-width: 386px;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 31px;
     letter-spacing: 0.3px;
+    @include mobileStyles {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      padding-bottom: 60px;
+    }
   }
 
   &__right {
+    grid-area: B;
   }
 
   &__img {
     width: 518px;
+    @include mobileStyles {
+      width: 100%;
+    }
   }
 
   &__button {
+    grid-area: C;
+    max-width: 163px;
     border: none;
     padding: 12px 21px;
     background: #ffdb00;
@@ -87,6 +136,13 @@
       box-sizing: border-box;
       border-radius: 10px;
     }
+
+    @include desktopStyles {
+      margin-top: 100px;
+    }
+    @include mobileStyles {
+      margin-top: 60px;
+    }
   }
 
   &__Ellipse-921 {
@@ -102,6 +158,9 @@
     border-radius: 50%;
     @include desktopStyles {
       top: 240px;
+    }
+    @include mobileStyles {
+      display: none;
     }
   }
 
@@ -120,6 +179,9 @@
     @include desktopStyles {
       top: 445px;
     }
+    @include mobileStyles {
+      display: none;
+    }
   }
 
   &__list {
@@ -129,7 +191,7 @@
   }
 
   &__item {
-    width: 255px;
+    max-width: 255px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-top: 30px;
 
@@ -143,5 +205,9 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 50px;
+    @include mobileStyles {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 }

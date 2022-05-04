@@ -15,7 +15,7 @@
 }
 
 @mixin desktopStyles {
-  @media (max-width: 1460px) {
+  @media (max-width: 1435px) {
     @content;
   }
 }
@@ -32,5 +32,15 @@
 
 /* 
 @include tabletStyles {    
+  }
+*/
+
+@mixin mobileStyles {
+  @media (max-width: 760px) {
+    @content;
+  }
+}
+/* 
+@include mobileStyles {    
   }
 */
