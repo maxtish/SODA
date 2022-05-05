@@ -1,0 +1,213 @@
+.taste {
+  padding: 120px 50px 50px;
+  @include mobileStyles {
+    padding: 50px 20px 20px;
+  }
+
+  &__title {
+    margin: 0 0 120px;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #1e3264;
+
+    @include mobileStyles {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__tastes {
+    position: relative;
+    padding: 90px 100px;
+    display: grid;
+    grid-template-areas:
+      'A B'
+      'A B';
+    justify-content: space-between;
+
+    background: #9960f6;
+
+    @include desktopStyles {
+      padding: 60px;
+      grid-template-areas:
+        'A'
+        'A'
+        'B';
+    }
+
+    @include mobileStyles {
+      padding: 20px;
+    }
+
+    &_structure {
+      grid-template-areas:
+        'A B'
+        'A B'
+        'C B';
+      justify-content: space-between;
+      background: #8556f8;
+
+      @include desktopStyles {
+        grid-template-areas:
+          'A A'
+          'B B'
+          'C .';
+      }
+    }
+  }
+
+  &__left {
+    grid-area: A;
+    position: relative;
+    color: $white;
+    @include flex($direction: column, $align: $start, $justify: $start);
+
+    @include desktopStyles {
+    }
+    @include mobileStyles {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 30px;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 48px;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.3px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    padding-bottom: 100px;
+    max-width: 386px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+    @include mobileStyles {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__right {
+    grid-area: B;
+  }
+
+  &__img {
+    width: 518px;
+    @include mobileStyles {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    grid-area: C;
+    max-width: 163px;
+    border: none;
+    padding: 12px 21px;
+    background: #ffdb00;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+    color: #1e3264;
+    margin-top: auto;
+    transition: 0.5s;
+    border: 2px solid #ffdb00;
+    cursor: pointer;
+
+    &:hover {
+      background: #ffdb00;
+      border: 2px solid #1e3264;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    @include desktopStyles {
+      margin-top: 100px;
+    }
+    @include mobileStyles {
+      margin-top: 60px;
+    }
+  }
+
+  &__Ellipse-921 {
+    position: absolute;
+    top: 33px;
+    left: 45vw;
+
+    width: 185px;
+    height: 185px;
+    background: #e1fd2c;
+    border: 3px solid #016450;
+    box-sizing: border-box;
+    border-radius: 50%;
+    @include desktopStyles {
+      top: 240px;
+    }
+    @include mobileStyles {
+      display: none;
+    }
+  }
+
+  &__Ellipse-920 {
+    position: absolute;
+    top: 231px;
+    left: 50vw;
+
+    width: 138px;
+    height: 138px;
+    background: #ffdb00;
+    border: 3px solid #1e3264;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    @include desktopStyles {
+      top: 445px;
+    }
+    @include mobileStyles {
+      display: none;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    max-width: 255px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__item-text {
+    margin: 0 0 4px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    @include mobileStyles {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.streak {
+  position: relative;
+  overflow: hidden;
+  background: $colorBackgroundFresh;
+
+  &__text {
+    width: 2117px;
+    margin: 0 0 0 -100px;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $colorTextFresh;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 0 -374px;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  padding-top: 110px;
+  padding-left: 50px;
+
+  background-color: $purple;
+  @include flex($direction: row, $align: flex-end, $justify: flex-start);
+
+  @include desktopStyles {
+    padding-top: 196px;
+    flex-wrap: wrap;
+  }
+  @include mobileStyles {
+    padding: 100px 20px 0;
+  }
+
+  &__soda {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    margin: 0;
+    width: 87px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $yellow;
+    @include mobileStyles {
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0 100px;
+    max-width: 457px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include desktopStyles {
+      margin: 0;
+      font-size: 30px;
+      line-height: 38px;
+    }
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 30px;
+      min-width: 280px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__img {
+    margin-bottom: 50px;
+    max-width: 783px;
+
+    @include desktopStyles {
+      width: calc(100vw - 100px);
+    }
+    @include mobileStyles {
+      width: calc(100vw - 40px);
+    }
+  }
+
+  &__cricle {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    @include desktopStyles {
+      width: 128px;
+    }
+    @include mobileStyles {
+      width: 94px;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__b-cricle {
+    position: absolute;
+    top: -160px;
+    right: -160px;
+    background-color: #3530ff;
+    opacity: 0.2;
+    width: 565px;
+    height: 565px;
+    border-radius: 50%;
+
+    @include desktopStyles {
+      display: none;
+    }
+  }
+
+  &__container {
+    margin-bottom: 50px;
+    @include flex($direction: column, $align: $start, $justify: $end);
+
+    @include desktopStyles {
+      width: calc(100vw - 100px);
+      @include flex($direction: row, $align: $start, $justify: $between);
+    }
+    @include mobileStyles {
+      width: calc(100vw - 40px);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__button {
+    margin: 171px 0 0 100px;
+    background-color: $colorBackgroundButton;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: $colorTextButton;
+    transition: 0.5s;
+    border: 2px solid $colorBackgroundButton;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+    padding: 12px 30px;
+
+    &:hover {
+      border: 2px solid #1e3264;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    @include desktopStyles {
+      margin: 0 0 0 0;
+    }
+
+    @include mobileStyles {
+      padding: 10px 30px;
+    }
+  }
+
+  &__pineapple {
+    position: absolute;
+    top: 75%;
+    left: 87%;
+
+    @include desktopStyles {
+      top: 60%;
+      left: 75%;
+    }
+    @include mobileStyles {
+      top: 63%;
+      left: 80%;
+      width: 55px;
+      height: 80px;
+    }
+  }
+}

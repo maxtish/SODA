@@ -1,0 +1,165 @@
+.footer {
+  position: relative;
+  padding: 100px 50px 100px 150px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+  color: $white;
+  background: #7a54f9;
+  @include desktopStyles {
+    padding: 120px 50px 150px 50px;
+  }
+  @include mobileStyles {
+    @include flex($direction: column, $align: center, $justify: center);
+    padding: 60px 20px 20px;
+  }
+
+  &__circles {
+    @include mobileStyles {
+      margin: 50px;
+    }
+  }
+
+  &__b-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 300px;
+    height: 300px;
+    background: #9960f6;
+    border-radius: 50%;
+    @include tabletStyles {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__s-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 230px;
+    height: 230px;
+    background: #5551ff;
+    border-radius: 50%;
+    @include tabletStyles {
+      width: 153px;
+      height: 153px;
+    }
+  }
+
+  &__m-circle {
+    @include flex($direction: column, $align: center, $justify: center);
+    width: 152px;
+    height: 152px;
+    background: #3530ff;
+    border-radius: 50%;
+    @include tabletStyles {
+      width: 101px;
+      height: 101px;
+    }
+  }
+  &__m-circle-text {
+    margin: 0;
+    color: #ffa72b;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    @include tabletStyles {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__wrapper {
+    width: 753px;
+    @include flex($direction: row, $align: $start, $justify: $start);
+    @include mobileStyles {
+      max-width: 753px;
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
+  }
+
+  &__nav {
+    @include desktopStyles {
+      margin-left: 100px;
+    }
+    @include mobileStyles {
+      margin: 0;
+    }
+  }
+
+  &__title-nav {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include mobileStyles {
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__item-links {
+    color: $white;
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__contacts {
+    margin-left: 145px;
+    @include flex($direction: column, $align: $start, $justify: $start);
+    @include desktopStyles {
+      margin-left: 96px;
+      @include mobileStyles {
+        margin: 50px 0 50px;
+        align-items: center;
+      }
+    }
+  }
+  &__title-contacts {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__links-contacts {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__copy {
+    position: absolute;
+    bottom: 100px;
+    left: 45vw;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    @include desktopStyles {
+      bottom: 50px;
+    }
+    @include mobileStyles {
+      position: static;
+    }
+  }
+}
