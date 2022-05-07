@@ -17,6 +17,7 @@
   color: #fff;
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
   margin: auto;
+  max-width: 1440px;
 }
 
 .header {
@@ -424,7 +425,7 @@
 .taste__Ellipse-921 {
   position: absolute;
   top: 33px;
-  left: 35.9vw;
+  left: 135.3%;
   width: 185px;
   height: 185px;
   background: #e1fd2c;
@@ -448,7 +449,7 @@
 .taste__Ellipse-920 {
   position: absolute;
   top: 231px;
-  left: 42.7vw;
+  left: 161%;
   width: 138px;
   height: 138px;
   background: #ffdb00;
@@ -891,7 +892,8 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   color: #fff;
   background: #7a54f9;
 }
@@ -992,16 +994,15 @@
 }
 
 .footer__wrapper {
-  width: 753px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 760px) {
   .footer__wrapper {
-    max-width: 753px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1115,7 +1116,7 @@
 .footer__copy {
   position: absolute;
   bottom: 100px;
-  left: 47.9vw;
+  left: 48.4%;
   margin: 0;
   font-weight: 400;
   font-size: 14px;

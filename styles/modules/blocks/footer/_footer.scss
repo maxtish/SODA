@@ -1,7 +1,8 @@
 .footer {
   position: relative;
   padding: 100px 50px 100px 150px;
-  @include flex($direction: row, $align: $start, $justify: center);
+  @include flex($direction: row, $align: $start, $justify: $start);
+  flex-wrap: wrap;
   color: $white;
   background: #7a54f9;
   @include desktopStyles {
@@ -67,10 +68,9 @@
   }
 
   &__wrapper {
-    width: 753px;
     @include flex($direction: row, $align: $start, $justify: $start);
+    flex-wrap: wrap;
     @include mobileStyles {
-      max-width: 753px;
       @include flex($direction: column, $align: center, $justify: $start);
     }
   }
@@ -159,7 +159,7 @@
   &__copy {
     position: absolute;
     bottom: 100px;
-    left: 47.9vw;
+    left: 48.4%;
     margin: 0;
     font-weight: 400;
     font-size: 14px;
