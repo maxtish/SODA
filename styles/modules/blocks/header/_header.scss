@@ -3,10 +3,9 @@
   overflow: hidden;
   padding-top: 110px;
   padding-left: 50px;
-
   background-color: $purple;
   @include flex($direction: row, $align: flex-end, $justify: flex-start);
-
+  flex-wrap: wrap;
   @include desktopStyles {
     padding-top: 196px;
     flex-wrap: wrap;
@@ -37,7 +36,6 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
-
     @include desktopStyles {
       margin: 0;
       font-size: 30px;
@@ -54,9 +52,9 @@
     position: relative;
   }
   &__img {
+    display: block;
     margin-bottom: 50px;
     max-width: 783px;
-
     @include desktopStyles {
       width: calc(100vw - 100px);
     }
@@ -69,7 +67,6 @@
     position: absolute;
     top: 50px;
     right: 50px;
-
     @include desktopStyles {
       width: 128px;
     }
@@ -96,7 +93,7 @@
   }
 
   &__container {
-    margin-bottom: 50px;
+    margin-bottom: 52px; //50px figma
     @include flex($direction: column, $align: $start, $justify: $end);
 
     @include desktopStyles {
@@ -121,20 +118,18 @@
     border: 2px solid $colorBackgroundButton;
     font-weight: 500;
     font-size: 18px;
-    line-height: 31px;
+    line-height: 28px; //31px figma
     letter-spacing: 0.3px;
-    padding: 12px 30px;
+    padding: 10px 28px; //12px 30px; figma
 
     &:hover {
       border: 2px solid #1e3264;
       box-sizing: border-box;
       border-radius: 10px;
     }
-
     @include desktopStyles {
       margin: 0 0 0 0;
     }
-
     @include mobileStyles {
       padding: 10px 30px;
     }
@@ -142,9 +137,8 @@
 
   &__pineapple {
     position: absolute;
-    top: 75%;
-    left: 87%;
-
+    top: 75.5%;
+    left: 87.9%;
     @include desktopStyles {
       top: 60%;
       left: 75%;
@@ -154,6 +148,25 @@
       left: 80%;
       width: 55px;
       height: 80px;
+    }
+  }
+
+  &__text {
+    width: 2117px;
+    background: $colorBackgroundFresh;
+    margin: 0 0 0 -143px;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $colorTextFresh;
+    white-space: nowrap;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 0 -374px;
     }
   }
 }

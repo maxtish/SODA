@@ -16,12 +16,16 @@
   }
 
   &__title {
+    padding-left: 4px; //perfecktPixel
     margin: 0;
     align-self: center;
     max-width: 460px;
+    font-style: normal;
     font-weight: 500;
     font-size: 60px;
     line-height: 67px;
+    /* or 112% */
+
     letter-spacing: 0.3px;
     color: $colortext;
     @include desktopStyles {
@@ -52,8 +56,8 @@
   }
   &__nonagon-block {
     position: absolute;
-    top: 190px;
-    left: -50px;
+    top: 119px;
+    left: -101px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,75 +72,6 @@
   }
 
   &__nonagon {
-    transform: rotate(161.01deg);
-    position: absolute;
-    width: 172px;
-    height: 99.3px;
-    background-color: #cef564;
-    margin: 49.65px 0;
-    border-left: solid 3px #016450;
-    border-right: solid 3px #016450;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      width: 121.62px;
-      height: 121.62px;
-      -webkit-transform: scaleY(0.5774) rotate(-45deg);
-      -ms-transform: scaleY(0.5774) rotate(-45deg);
-      transform: scaleY(0.5774) rotate(-45deg);
-      background-color: inherit;
-      left: 22.1888px;
-    }
-
-    &:before {
-      top: -60.8112px;
-      border-top: solid 4.2426px #016450;
-      border-right: solid 4.2426px #016450;
-    }
-
-    &:after {
-      bottom: -60.8112px;
-      border-bottom: solid 4.2426px #016450;
-      border-left: solid 4.2426px #016450;
-    }
-    @include mobileStyles {
-      position: absolute;
-      width: 98px;
-      height: 56.58px;
-      background-color: #cef564;
-      margin: 28.29px 0;
-      border-left: solid 3px #016450;
-      border-right: solid 3px #016450;
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        width: 69.3px;
-        height: 69.3px;
-        -webkit-transform: scaleY(0.5774) rotate(-45deg);
-        -ms-transform: scaleY(0.5774) rotate(-45deg);
-        transform: scaleY(0.5774) rotate(-45deg);
-        background-color: inherit;
-        left: 11.3518px;
-      }
-
-      &:before {
-        top: -34.6482px;
-        border-top: solid 4.2426px #016450;
-        border-right: solid 4.2426px #016450;
-      }
-
-      &:after {
-        bottom: -34.6482px;
-        border-bottom: solid 4.2426px #016450;
-        border-left: solid 4.2426px #016450;
-      }
-    }
   }
 
   /* position: absolute;
@@ -151,6 +86,7 @@
       left: 2%;*/
 
   &__nonagon-text {
+    position: absolute;
     margin: 0;
     z-index: 1;
     transform: rotate(-18.99deg);

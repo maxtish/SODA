@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   padding: 100px 50px 100px 150px;
-  @include flex($direction: row, $align: $start, $justify: $between);
+  @include flex($direction: row, $align: $start, $justify: center);
   color: $white;
   background: #7a54f9;
   @include desktopStyles {
@@ -13,6 +13,7 @@
   }
 
   &__circles {
+    margin-right: 247px;
     @include mobileStyles {
       margin: 50px;
     }
@@ -101,6 +102,11 @@
 
   &__item {
     margin: 0;
+    margin-bottom: 3px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   &__item-links {
@@ -117,7 +123,7 @@
     }
   }
   &__contacts {
-    margin-left: 145px;
+    margin-left: 142px;
     @include flex($direction: column, $align: $start, $justify: $start);
     @include desktopStyles {
       margin-left: 96px;
@@ -141,6 +147,10 @@
     line-height: 28px;
     letter-spacing: 0.3px;
     text-decoration: none;
+    margin-bottom: 3px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -149,7 +159,7 @@
   &__copy {
     position: absolute;
     bottom: 100px;
-    left: 45vw;
+    left: 47.9vw;
     margin: 0;
     font-weight: 400;
     font-size: 14px;
