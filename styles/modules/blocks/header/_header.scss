@@ -77,7 +77,7 @@
     }
   }
 
-  &__b-cricle {
+  &::after {
     position: absolute;
     top: -160px;
     right: -160px;

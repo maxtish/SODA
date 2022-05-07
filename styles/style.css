@@ -132,7 +132,7 @@
   }
 }
 
-.header__b-cricle {
+.header::after {
   position: absolute;
   top: -160px;
   right: -160px;
@@ -144,7 +144,7 @@
 }
 
 @media (max-width: 1435px) {
-  .header__b-cricle {
+  .header::after {
     display: none;
   }
 }
@@ -479,22 +479,19 @@
 .taste__item {
   max-width: 255px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  margin-top: 30px;
+  margin: 30px 0 0;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50px;
 }
 
 .taste__item:first-of-type {
   margin-top: 0;
 }
 
-.taste__item-text {
-  margin: 0 0 5px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 50px;
-}
-
 @media (max-width: 760px) {
-  .taste__item-text {
+  .taste__item {
     font-size: 22px;
     line-height: 22px;
   }
@@ -914,83 +911,39 @@
   }
 }
 
-.footer__circles {
-  margin-right: 247px;
-}
-
-@media (max-width: 760px) {
-  .footer__circles {
-    margin: 50px;
-  }
-}
-
-.footer__b-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 300px;
-  background: #9960f6;
-  border-radius: 50%;
-}
-
-@media (max-width: 780px) {
-  .footer__b-circle {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-.footer__s-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 230px;
-  background: #5551ff;
-  border-radius: 50%;
-}
-
-@media (max-width: 780px) {
-  .footer__s-circle {
-    width: 153px;
-    height: 153px;
-  }
-}
-
-.footer__m-circle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 152px;
-  height: 152px;
-  background: #3530ff;
-  border-radius: 50%;
-}
-
-@media (max-width: 780px) {
-  .footer__m-circle {
-    width: 101px;
-    height: 101px;
-  }
-}
-
 .footer__m-circle-text {
-  margin: 0;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #ffa72b;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
 }
 
-@media (max-width: 780px) {
-  .footer__m-circle-text {
-    font-size: 20px;
-    line-height: 20px;
-  }
+.footer::before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  content: ' ';
+  width: 300px;
+  height: 300px;
+  background: #9960f6;
+  border-radius: 50%;
+}
+
+.footer::before {
+  position: relative;
+  content: ' ';
+  width: 229px;
+  height: 229px;
+  background: #5551ff;
+  border-radius: 50%;
 }
 
 .footer__wrapper {
