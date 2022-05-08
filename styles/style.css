@@ -46,18 +46,18 @@
   }
 }
 
-.button_block_teste {
+.button_block_taste {
   grid-area: C;
 }
 
 @media (max-width: 1400px) {
-  .button_block_teste {
+  .button_block_taste {
     margin-top: 100px;
   }
 }
 
 @media (max-width: 760px) {
-  .button_block_teste {
+  .button_block_taste {
     margin-top: 60px;
   }
 }
