@@ -8,7 +8,7 @@
     margin: 0 50px;
   }
   @include mobileStyles {
-    padding: 10px;
+    padding: 20px 10px 10px;
     margin: 0 20px;
   }
 
@@ -17,15 +17,25 @@
     color: $colortext;
     @include flex($direction: column, $align: $start, $justify: center);
     align-self: center;
+    @include tabletStyles {
+      padding-left: 26px;
+      margin-top: 0;
+    }
+    @include mobileStyles {
+      padding-left: 10px;
+    }
   }
+
   &__title {
     margin: 0;
     font-weight: 500;
     font-size: 60px;
     line-height: 65px;
     letter-spacing: 0.3px;
+    @include tabletStyles {
+    }
+
     @include mobileStyles {
-      padding-left: 10px;
       font-size: 20px;
       line-height: 24px;
     }
@@ -50,13 +60,14 @@
     background: $colorSamplesForm;
     padding: 24px 30px 30px;
 
-    @include desktopStyles {
+    @include tabletStyles {
+      margin-top: 0px;
       width: 70.3vw;
       max-width: 540px;
     }
     @include mobileStyles {
       padding: 20px;
-      width: 68.75vw;
+      width: 68.9vw;
       max-width: 540px;
     }
   }
@@ -77,6 +88,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @include mobileStyles {
+      margin: 40px 0 0;
+    }
   }
 
   &__input-block {
@@ -85,20 +99,25 @@
     width: 310px;
     margin-left: 13px;
     margin-top: 0;
+
     &:last-of-type {
       margin-top: 14px;
       width: 633px;
-      @include desktopStyles {
+      @include tabletStyles {
         width: 70.3vw;
         max-width: 540px;
       }
       @include mobileStyles {
-        width: 68.75vw;
-        max-width: 540px;
+        margin-top: 8px;
       }
     }
-    @include desktopStyles {
-      margin: 0;
+
+    @include tabletStyles {
+      &:first-of-type {
+        margin-top: 0px;
+      }
+      margin-left: 0;
+      margin-top: 13px;
     }
 
     &:last-of-type {
@@ -107,6 +126,12 @@
 
     &:first-of-type {
       margin-left: 0;
+    }
+
+    @include mobileStyles {
+      width: 68.75vw;
+      max-width: 540px;
+      margin-top: 8px;
     }
   }
 
@@ -135,13 +160,14 @@
     border: none;
     border-bottom: 2px solid $white;
 
-    @include desktopStyles {
+    @include tabletStyles {
       width: 70.3vw;
       max-width: 540px;
     }
     @include mobileStyles {
       width: 68.75vw;
       max-width: 540px;
+      padding-bottom: 0;
     }
 
     &:focus {
@@ -169,7 +195,7 @@
     margin: 179px 0 0;
     padding: 0;
     border: none;
-    @include desktopStyles {
+    @include tabletStyles {
       margin-top: 90px;
     }
     @include mobileStyles {

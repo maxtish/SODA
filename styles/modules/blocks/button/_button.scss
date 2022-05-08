@@ -20,10 +20,17 @@
     border-radius: 10px;
   }
 
+  &_block_header {
+    @include mobileStyles {
+      width: 152px;
+      font-size: 16px;
+    }
+  }
+
   &_block_teste {
     grid-area: C;
 
-    @include desktopStyles {
+    @include tabletStyles {
       margin-top: 100px;
     }
     @include mobileStyles {

@@ -3,8 +3,12 @@
   display: block;
   max-width: 1340px;
   padding: 120px 0 0;
+  @include tabletStyles {
+    margin: 0 50px;
+  }
   @include mobileStyles {
-    padding: 50px 20px 20px;
+    padding: 51px 20px 20px;
+    margin: 0;
   }
 
   &__title {
@@ -33,11 +37,9 @@
     justify-content: space-between;
     align-items: end;
     background: #9960f6;
-
-    @include desktopStyles {
+    @include tabletStyles {
       padding: 60px;
       grid-template-areas:
-        'A'
         'A'
         'B';
     }
@@ -54,7 +56,7 @@
       justify-content: space-between;
       background: #8556f8;
 
-      @include desktopStyles {
+      @include tabletStyles {
         grid-template-areas:
           'A A'
           'B B'
@@ -70,7 +72,7 @@
     color: $white;
     @include flex($direction: column, $align: $start, $justify: $start);
 
-    @include desktopStyles {
+    @include tabletStyles {
     }
     @include mobileStyles {
       margin-bottom: 0;
@@ -99,11 +101,14 @@
     font-size: 18px;
     line-height: 31px;
     letter-spacing: 0.3px;
+    @include tabletStyles {
+      padding-bottom: 60px;
+    }
     @include mobileStyles {
       font-weight: 400;
       font-size: 14px;
       line-height: 19px;
-      padding-bottom: 60px;
+      padding-bottom: 50px;
     }
   }
 
@@ -111,6 +116,10 @@
     display: block;
     grid-area: B;
     width: 518px;
+    @include tabletStyles {
+      width: calc(100vw - 220px);
+      max-width: 548px;
+    }
     @include mobileStyles {
       width: 100%;
     }
@@ -139,7 +148,7 @@
       border-radius: 10px;
     }
 
-    @include desktopStyles {
+    @include tabletStyles {
       margin-top: 100px;
     }
     @include mobileStyles {
@@ -153,6 +162,13 @@
     margin: 0;
     padding: 0;
     min-width: 255px;
+    @include tabletStyles {
+      margin-top: 40px;
+    }
+    @include mobileStyles {
+      margin-top: 11px;
+    }
+
     &::before {
       content: ' ';
       position: absolute;
@@ -164,8 +180,9 @@
       border: 3px solid #016450;
       box-sizing: border-box;
       border-radius: 50%;
-      @include desktopStyles {
-        top: 240px;
+      @include tabletStyles {
+        top: 299px;
+        left: 423px;
       }
       @include mobileStyles {
         display: none;
@@ -184,8 +201,9 @@
       box-sizing: border-box;
       border-radius: 50%;
 
-      @include desktopStyles {
-        top: 445px;
+      @include tabletStyles {
+        top: 504px;
+        left: 470px;
       }
       @include mobileStyles {
         display: none;
@@ -201,13 +219,21 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 50px;
+
+    @include tabletStyles {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
     &:first-of-type {
       margin-top: 0;
     }
-
     @include mobileStyles {
+      margin: 20px 0 0;
+      max-width: 240px;
       font-size: 22px;
       line-height: 22px;
+      padding-bottom: 20px;
     }
   }
 }

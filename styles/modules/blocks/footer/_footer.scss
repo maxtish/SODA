@@ -10,8 +10,11 @@
     'A C';
   justify-content: start;
 
-  @include desktopStyles {
-    padding: 120px 50px 150px 50px;
+  @include tabletStyles {
+    padding: 120px 50px 50px 50px;
+    grid-template-areas:
+      'A B'
+      'A C';
   }
   @include mobileStyles {
     @include flex($direction: column, $align: center, $justify: center);
@@ -27,6 +30,16 @@
     background: #9960f6;
     border-radius: 50%;
     @include flex($direction: column, $align: center, $justify: center);
+    @include tabletStyles {
+      margin-right: 100px;
+      margin-bottom: 100px;
+      width: 200px;
+      height: 200px;
+    }
+    @include mobileStyles {
+      margin-right: 0;
+      margin-bottom: 48px;
+    }
     &::before {
       position: absolute;
       @include flex($direction: column, $align: center, $justify: center);
@@ -49,6 +62,10 @@
       font-size: 30px;
       line-height: 30px;
       text-transform: uppercase;
+      @include tabletStyles {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -63,8 +80,8 @@
   }
 
   &__nav {
-    @include desktopStyles {
-      margin-left: 100px;
+    @include tabletStyles {
+      margin-left: 0;
     }
     @include mobileStyles {
       margin: 0;
@@ -112,7 +129,7 @@
   &__contacts {
     margin-left: 142px;
     @include flex($direction: column, $align: $start, $justify: $start);
-    @include desktopStyles {
+    @include tabletStyles {
       margin-left: 96px;
       @include mobileStyles {
         margin: 50px 0 50px;
@@ -151,11 +168,11 @@
     font-size: 14px;
     line-height: 15px;
     letter-spacing: 0.3px;
-    @include desktopStyles {
+    @include tabletStyles {
       bottom: 50px;
     }
     @include mobileStyles {
-      position: static;
+      align-self: center;
     }
   }
 }

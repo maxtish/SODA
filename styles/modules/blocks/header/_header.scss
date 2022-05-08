@@ -3,14 +3,28 @@
   overflow: hidden;
   padding: 40px 50px 126px;
   background-color: $purple;
-
   display: grid;
   grid-template-areas:
     'A C'
     'B C'
     'B D';
   justify-content: space-between;
-
+  @include tabletStyles {
+    grid-template-areas:
+      'A C'
+      'B B'
+      'D D';
+    padding-bottom: 128px;
+  }
+  @include mobileStyles {
+    padding: 20px 20px 80px;
+    grid-template-areas:
+      'A C'
+      'B C'
+      'B B'
+      'D D';
+    grid-auto-rows: 60px auto auto auto;
+  }
   &__logo-text {
     width: 100px;
     grid-area: A;
@@ -20,6 +34,10 @@
     line-height: 30px;
     text-transform: uppercase;
     color: $yellow;
+    @include mobileStyles {
+      font-size: 20px;
+      margin: 0 0 0px;
+    }
   }
 
   &__title {
@@ -28,20 +46,49 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
+    @include tabletStyles {
+      font-size: 30px;
+      line-height: 38px;
+      margin: 0;
+    }
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   &__wrapper {
     grid-area: B;
     max-width: 783px;
     position: relative;
+    @include tabletStyles {
+      margin-top: 28px;
+      margin-bottom: 50px;
+    }
+    @include mobileStyles {
+      margin-top: 20px;
+    }
   }
   &__img {
     display: block;
+    max-width: 783px;
+    width: calc(100vw - 100px);
+    @include mobileStyles {
+      width: calc(100vw - 40px);
+    }
   }
 
   &__cricle {
     grid-area: C;
+    z-index: 2;
     justify-self: flex-end;
+    @include tabletStyles {
+      width: 128px;
+    }
+    @include mobileStyles {
+      width: 94px;
+    }
   }
   &::before {
     content: ' ';
@@ -54,19 +101,34 @@
     height: 565px;
     border-radius: 50%;
 
-    @include desktopStyles {
+    @include tabletStyles {
       display: none;
     }
   }
 
   &__container {
     grid-area: D;
+    @include tabletStyles {
+      @include flex($direction: row, $align: $start, $justify: $between);
+    }
+    @include mobileStyles {
+      flex-wrap: wrap;
+    }
   }
 
   &__logo-img {
     position: absolute;
     top: 81.8%;
     left: 87.9%;
+    @include tabletStyles {
+      top: 68%;
+      left: 75%;
+    }
+    @include mobileStyles {
+      top: 75%;
+      left: 63.5%;
+      width: 98px;
+    }
   }
 
   &__text {
@@ -84,5 +146,10 @@
     text-transform: uppercase;
     color: $colorTextFresh;
     white-space: nowrap;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      left: -558px;
+    }
   }
 }
