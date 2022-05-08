@@ -1,86 +1,53 @@
 .header {
   position: relative;
   overflow: hidden;
-  padding-top: 110px;
-  padding-left: 50px;
+  padding: 40px 50px 126px;
   background-color: $purple;
-  @include flex($direction: row, $align: flex-end, $justify: flex-start);
-  flex-wrap: wrap;
-  @include desktopStyles {
-    padding-top: 196px;
-    flex-wrap: wrap;
-  }
-  @include mobileStyles {
-    padding: 100px 20px 0;
-  }
+
+  display: grid;
+  grid-template-areas:
+    'A C'
+    'B C'
+    'B D';
+  justify-content: space-between;
 
   &__soda {
-    position: absolute;
-    top: 40px;
-    left: 50px;
-    margin: 0;
-    width: 87px;
+    width: 100px;
+    grid-area: A;
+    margin: 0 0 40px;
     font-weight: 700;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
     color: $yellow;
-    @include mobileStyles {
-      font-size: 20px;
-    }
   }
 
   &__title {
-    margin: 0 0 0 100px;
+    margin: 0;
     max-width: 457px;
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
-    @include desktopStyles {
-      margin: 0;
-      font-size: 30px;
-      line-height: 38px;
-    }
-    @include mobileStyles {
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 30px;
-      min-width: 280px;
-    }
   }
+
   &__wrapper {
+    grid-area: B;
+    max-width: 783px;
     position: relative;
   }
   &__img {
     display: block;
-    margin-bottom: 50px;
-    max-width: 783px;
-    @include desktopStyles {
-      width: calc(100vw - 100px);
-    }
-    @include mobileStyles {
-      width: calc(100vw - 40px);
-    }
   }
 
   &__cricle {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    @include desktopStyles {
-      width: 128px;
-    }
-    @include mobileStyles {
-      width: 94px;
-      top: 20px;
-      right: 20px;
-    }
+    grid-area: C;
+    justify-self: flex-end;
   }
-
-  &::after {
+  &::before {
+    content: ' ';
     position: absolute;
+    left: calc(100% - 405px);
     top: -160px;
-    right: -160px;
     background-color: #3530ff;
     opacity: 0.2;
     width: 565px;
@@ -93,21 +60,11 @@
   }
 
   &__container {
-    margin-bottom: 52px; //50px figma
-    @include flex($direction: column, $align: $start, $justify: $end);
-
-    @include desktopStyles {
-      width: calc(100vw - 100px);
-      @include flex($direction: row, $align: $start, $justify: $between);
-    }
-    @include mobileStyles {
-      width: calc(100vw - 40px);
-      flex-wrap: wrap;
-    }
+    grid-area: D;
   }
 
   &__button {
-    margin: 171px 0 0 100px;
+    margin: 170px 0 0 0;
     background-color: $colorBackgroundButton;
     border: none;
     text-align: center;
@@ -118,7 +75,7 @@
     border: 2px solid $colorBackgroundButton;
     font-weight: 500;
     font-size: 18px;
-    line-height: 28px; //31px figma
+    line-height: 31px; //31px figma
     letter-spacing: 0.3px;
     padding: 10px 28px; //12px 30px; figma
 
@@ -127,34 +84,21 @@
       box-sizing: border-box;
       border-radius: 10px;
     }
-    @include desktopStyles {
-      margin: 0 0 0 0;
-    }
-    @include mobileStyles {
-      padding: 10px 30px;
-    }
   }
 
   &__pineapple {
     position: absolute;
-    top: 75.5%;
+    top: 81.8%;
     left: 87.9%;
-    @include desktopStyles {
-      top: 60%;
-      left: 75%;
-    }
-    @include mobileStyles {
-      top: 63%;
-      left: 80%;
-      width: 55px;
-      height: 80px;
-    }
   }
 
   &__text {
+    position: absolute;
+    margin: 0;
+    left: -93px;
+    bottom: 0;
     width: 2117px;
     background: $colorBackgroundFresh;
-    margin: 0 0 0 -143px;
     padding: 20px 0;
     font-weight: 700;
     font-size: 30px;
@@ -163,10 +107,5 @@
     text-transform: uppercase;
     color: $colorTextFresh;
     white-space: nowrap;
-    @include mobileStyles {
-      font-size: 20px;
-      line-height: 24px;
-      margin: 0 0 0 -374px;
-    }
   }
 }

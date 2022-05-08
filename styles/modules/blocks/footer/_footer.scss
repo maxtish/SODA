@@ -1,10 +1,15 @@
 .footer {
   position: relative;
   padding: 100px 50px 100px 150px;
-  @include flex($direction: row, $align: $start, $justify: $start);
-  flex-wrap: wrap;
   color: $white;
   background: #7a54f9;
+  display: grid;
+  grid-template-areas:
+    'A B'
+    'A B'
+    'A C';
+  justify-content: start;
+
   @include desktopStyles {
     padding: 120px 50px 150px 50px;
   }
@@ -13,36 +18,43 @@
     padding: 60px 20px 20px;
   }
 
-  &__m-circle-text {
-    margin-top: 50px;
+  &__circle-text {
+    grid-area: A;
+    margin-right: 247px;
     position: relative;
-    @include flex($direction: column, $align: center, $justify: center);
-    color: #ffa72b;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 30px;
-  }
-
-  &::before,
-  &::after {
-    @include flex($direction: column, $align: center, $justify: center);
-    position: relative;
-    content: ' ';
     width: 300px;
     height: 300px;
     background: #9960f6;
     border-radius: 50%;
-  }
-  &&::before {
-    position: relative;
-    content: ' ';
-    width: 229px;
-    height: 229px;
-    background: #5551ff;
-    border-radius: 50%;
+    @include flex($direction: column, $align: center, $justify: center);
+    &::before {
+      position: absolute;
+      @include flex($direction: column, $align: center, $justify: center);
+      content: ' ';
+      width: 76.3%;
+      height: 76.3%;
+      background: #5551ff;
+      border-radius: 50%;
+    }
+    &::after {
+      position: absolute;
+      @include flex($direction: column, $align: center, $justify: center);
+      content: 'soda';
+      width: 50.8%;
+      height: 50.8%;
+      background: #3530ff;
+      border-radius: 50%;
+      color: #ffa72b;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
   }
 
   &__wrapper {
+    grid-area: B;
+
     @include flex($direction: row, $align: $start, $justify: $start);
     flex-wrap: wrap;
     @include mobileStyles {
@@ -132,9 +144,8 @@
     }
   }
   &__copy {
-    position: absolute;
-    bottom: 100px;
-    left: 48.4%;
+    grid-area: C;
+    align-self: end;
     margin: 0;
     font-weight: 400;
     font-size: 14px;

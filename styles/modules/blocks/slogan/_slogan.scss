@@ -1,6 +1,6 @@
 .slogan {
-  max-height: 580px;
-  margin-bottom: 0px;
+  // max-height: 580px;
+  margin-bottom: -103px;
   position: relative;
   padding: 0 180px 0 150px;
   @include flex($direction: row, $align: $start, $justify: $between);
@@ -17,8 +17,8 @@
 
   &__title {
     padding-left: 4px; //perfecktPixel
-    margin: 0;
-    align-self: center;
+    margin: 190px 0 0;
+
     max-width: 460px;
     font-style: normal;
     font-weight: 500;
@@ -41,6 +41,31 @@
   }
   &__wrapper {
     position: relative;
+    &::before {
+      position: absolute;
+      top: 119px;
+      left: -102px;
+      width: 172px;
+      height: 172px;
+      content: ' ';
+      @include flex($direction: column, $align: center, $justify: center);
+      background-image: url(../../../../images/octagon.svg);
+      background-repeat: no-repeat;
+      text-transform: uppercase;
+    }
+    &::after {
+      position: absolute;
+      top: 114px;
+      left: -105px;
+      width: 172px;
+      height: 172px;
+      content: ' ';
+      @include flex($direction: column, $align: center, $justify: center);
+      background-image: url(../../../../images/mango.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      text-transform: uppercase;
+    }
   }
   &__img {
     position: relative;
@@ -52,55 +77,6 @@
     @include mobileStyles {
       margin-top: 50px;
       width: 100%;
-    }
-  }
-  &__nonagon-block {
-    position: absolute;
-    top: 119px;
-    left: -101px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include desktopStyles {
-      top: 225px;
-      left: -50px;
-    }
-    @include mobileStyles {
-      top: 245px;
-      left: 50px;
-    }
-  }
-
-  &__nonagon {
-  }
-
-  /* position: absolute;
-    top: 130px;
-    left: -110px;
-    width: 172px;
-    height: 172px;
-    @include mobileStyles {
-      width: 98px;
-      height: 98px;
-      top: 62%;
-      left: 2%;*/
-
-  &__nonagon-text {
-    position: absolute;
-    margin: 0;
-    z-index: 1;
-    transform: rotate(-18.99deg);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #016450;
-
-    @include mobileStyles {
-      font-size: 8px;
-      line-height: 9px;
     }
   }
 }
