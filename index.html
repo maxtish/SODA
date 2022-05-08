@@ -12,13 +12,13 @@
 <body class="page">
 
     <header class="header">
-        <p class="header__soda">soda</p>
+        <p class="header__logo-text">soda</p>
         <!--A-->
 
         <div class="header__wrapper">
             <!--B-->
             <img class="header__img" src="./images/mexican-soda.png" alt="Лимонад">
-            <img class="header__pineapple" src="./images/pineapple.svg" alt="Ананас">
+            <img class="header__logo-img" src="./images/pineapple.svg" alt="Ананас">
         </div>
 
         <img class="header__cricle" src="./images/circle.svg" alt="Круг-лого">
@@ -28,7 +28,7 @@
             <!--D-->
             <h1 class="header__title">Вкусные лимонады
                 из&#160;фруктов</h1>
-            <button class="header__button">Подробнее</button>
+            <button class="button">Подробнее</button>
         </div>
 
         <p class="header__text">Fresh — Fresh — Fresh — Fresh — Fresh — Fresh — Fresh — Fresh — Fresh — Fresh —
@@ -43,7 +43,7 @@
 
             <div class="taste__tastes" id="taste">
 
-                <div class="taste__left">
+                <div class="taste__wrapper">
                     <h3 class="taste__subtitle">Вкусы</h3>
                     <p class="taste__paragraph">Пейте фрукты, а не газировку со вкусовыми добавками, наши лимонады на
                         100% натуральны!</p>
@@ -54,9 +54,9 @@
             </div>
 
 
-            <div class="taste__tastes taste__tastes_structure" id="structure">
+            <div class="taste__tastes taste__tastes_block_structure" id="structure">
 
-                <div class="taste__left">
+                <div class="taste__wrapper">
 
                     <h3 class="taste__subtitle">Состав</h3>
                     <p class="taste__paragraph">Наши натуральные лимонады делаются из натуральных компонентов.</p>
@@ -83,7 +83,7 @@
                 </ul>
 
 
-                <button class="taste__button">Попробовать</button>
+                <button class="button button_block_teste">Попробовать</button>
 
             </div>
         </section>
@@ -108,22 +108,20 @@
 
                     <fieldset class="samples__input-container">
                         <div class="samples__input-block">
-                            <input type="text" class="samples__item" id="name-input" name="name">
-                            <label class="samples__label" for="name-input">Имя *</label>
+                            <input type="text" class="samples__item" id="name-input" name="name" required>
+                            <label class="samples__label" id="name-label" for="name-input">Имя *</label>
                         </div>
                         <div class="samples__input-block">
-                            <input type="text" class="samples__item" id='surname-input' name="surname">
-                            <label class="samples__label" for="surname-input">Фамилия *</label>
+                            <input type="text" class="samples__item" id="surname-input" name="surname" required>
+                            <label class="samples__label" id="surname-label" for="surname-input">Фамилия *</label>
                         </div>
                         <div class="samples__input-block">
-                            <input type="text" class="samples__item samples__item_width" id='email-input' name="email">
-                            <label class="samples__label" for="email-input">Email *</label>
+                            <input type="text" class="samples__item" id="email-input" name="email" required>
+                            <label class="samples__label" id="emai-label" for="email-input">Email *</label>
                         </div>
                     </fieldset>
-
-
                     <fieldset class="samples__handlers">
-                        <input class="samples__button" type="submit" value="Запросить">
+                        <input class="button button_block_samples" type="submit" value="Запросить">
                     </fieldset>
                 </form>
             </div>

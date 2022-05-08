@@ -31,7 +31,7 @@
       'A B'
       'A B';
     justify-content: space-between;
-
+    align-items: end;
     background: #9960f6;
 
     @include desktopStyles {
@@ -46,7 +46,7 @@
       padding: 20px;
     }
 
-    &_structure {
+    &_block_structure {
       grid-template-areas:
         'A B'
         'A B'
@@ -63,8 +63,9 @@
     }
   }
 
-  &__left {
+  &__wrapper {
     grid-area: A;
+    align-self: flex-start;
     position: relative;
     color: $white;
     @include flex($direction: column, $align: $start, $justify: $start);
