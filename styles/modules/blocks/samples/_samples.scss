@@ -1,0 +1,210 @@
+.samples {
+  background-color: $colorBackgroundSamples;
+  padding: 0 50px 60px 150px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+  flex-wrap: wrap;
+  @include desktopStyles {
+    padding: 60px 34px 34px 34px;
+    margin: 0 50px;
+  }
+  @include mobileStyles {
+    padding: 20px 10px 10px;
+    margin: 0 20px;
+  }
+
+  &__content {
+    margin-top: 115px;
+    color: $colortext;
+    @include flex($direction: column, $align: $start, $justify: center);
+    align-self: center;
+    @include tabletStyles {
+      padding-left: 26px;
+      margin-top: 0;
+    }
+    @include mobileStyles {
+      padding-left: 10px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: 0.3px;
+    @include tabletStyles {
+    }
+
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__paragraph {
+    margin: 48px 0 100px;
+    width: 457px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 0.3px;
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 240px;
+      margin: 20px 0 50px;
+    }
+  }
+  &__container {
+    margin-top: 60px;
+    max-width: 633px;
+    background: $colorSamplesForm;
+    padding: 24px 30px 30px;
+
+    @include tabletStyles {
+      margin-top: 0px;
+      width: 70.3vw;
+      max-width: 540px;
+    }
+    @include mobileStyles {
+      padding: 20px;
+      width: 68.9vw;
+      max-width: 540px;
+    }
+  }
+  &__title-form {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__input-container {
+    margin: 50px 0 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include mobileStyles {
+      margin: 40px 0 0;
+    }
+  }
+
+  &__input-block {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 310px;
+    margin-left: 13px;
+    margin-top: 0;
+
+    &:last-of-type {
+      margin-top: 14px;
+      width: 633px;
+      @include tabletStyles {
+        width: 70.3vw;
+        max-width: 540px;
+      }
+      @include mobileStyles {
+        margin-top: 8px;
+      }
+    }
+
+    @include tabletStyles {
+      &:first-of-type {
+        margin-top: 0px;
+      }
+      margin-left: 0;
+      margin-top: 13px;
+    }
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    @include mobileStyles {
+      width: 68.75vw;
+      max-width: 540px;
+      margin-top: 8px;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.3px;
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 31px;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+    color: #fff;
+    width: 100%;
+    padding: 13px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $white;
+
+    @include tabletStyles {
+      width: 70.3vw;
+      max-width: 540px;
+    }
+    @include mobileStyles {
+      width: 68.75vw;
+      max-width: 540px;
+      padding-bottom: 0;
+    }
+
+    &:focus {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.3px;
+      color: #fff;
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      border-bottom: 2px solid $white;
+    }
+    &:focus + .samples__label {
+      color: #ffffff;
+      opacity: 0.5;
+    }
+    &:visited + .samples__label {
+      color: #ffffff;
+      opacity: 0.5;
+    }
+  }
+
+  &__handlers {
+    margin: 179px 0 0;
+    padding: 0;
+    border: none;
+    @include tabletStyles {
+      margin-top: 90px;
+    }
+    @include mobileStyles {
+      @include flex($direction: row, $align: center, $justify: center);
+      margin-top: 60px;
+    }
+  }
+  &__label_valid {
+    color: #ffffff;
+    opacity: 0.5;
+  }
+}

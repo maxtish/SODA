@@ -1,0 +1,104 @@
+.slogan {
+  margin-bottom: -103px;
+  position: relative;
+  padding: 0 180px 0 150px;
+  @include flex($direction: row, $align: $start, $justify: $between);
+  @include tabletStyles {
+    padding: 0;
+    margin-bottom: -90px;
+    @include flex($direction: column, $align: center, $justify: center);
+    align-items: center;
+  }
+  @include mobileStyles {
+    padding: 0 20px 0 20px;
+    margin-bottom: -60px;
+  }
+
+  &__title {
+    padding-left: 4px; //perfecktPixel
+    margin: 190px 0 0;
+    max-width: 460px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 67px;
+    letter-spacing: 0.3px;
+    color: $colortext;
+    @include tabletStyles {
+      width: 550px;
+      text-align: center;
+      margin-top: 120px;
+      padding: 0;
+    }
+    @include mobileStyles {
+      font-size: 20px;
+      line-height: 24px;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 119px;
+      left: -102px;
+      width: 172px;
+      height: 172px;
+      content: ' ';
+      @include flex($direction: column, $align: center, $justify: center);
+      background-image: url(../../../../images/octagon.svg);
+      background-repeat: no-repeat;
+      text-transform: uppercase;
+      @include tabletStyles {
+        top: 151px;
+        left: -89px;
+      }
+      @include mobileStyles {
+        top: 243px;
+        left: 13px;
+        width: 91px;
+        height: 91px;
+        background-size: cover;
+      }
+    }
+    &::after {
+      position: absolute;
+      top: 114px;
+      left: -105px;
+      width: 172px;
+      height: 172px;
+      content: ' ';
+      @include flex($direction: column, $align: center, $justify: center);
+      background-image: url(../../../../images/mango.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      text-transform: uppercase;
+      @include tabletStyles {
+        top: 147px;
+        left: -92px;
+      }
+      @include mobileStyles {
+        top: 271px;
+        left: 42px;
+        width: 31px;
+        height: 34px;
+        background-size: contain;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    margin-top: 70px;
+    z-index: -1;
+    @include tabletStyles {
+      display: block;
+      margin-top: 118px;
+    }
+    @include mobileStyles {
+      margin-top: 50px;
+      width: 100%;
+    }
+  }
+}

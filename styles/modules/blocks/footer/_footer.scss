@@ -1,0 +1,178 @@
+.footer {
+  position: relative;
+  padding: 100px 50px 100px 150px;
+  color: $white;
+  background: #7a54f9;
+  display: grid;
+  grid-template-areas:
+    'A B'
+    'A B'
+    'A C';
+  justify-content: start;
+
+  @include tabletStyles {
+    padding: 120px 50px 50px 50px;
+    grid-template-areas:
+      'A B'
+      'A C';
+  }
+  @include mobileStyles {
+    @include flex($direction: column, $align: center, $justify: center);
+    padding: 60px 20px 20px;
+  }
+
+  &__circle-text {
+    grid-area: A;
+    margin-right: 247px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #9960f6;
+    border-radius: 50%;
+    @include flex($direction: column, $align: center, $justify: center);
+    @include tabletStyles {
+      margin-right: 100px;
+      margin-bottom: 100px;
+      width: 200px;
+      height: 200px;
+    }
+    @include mobileStyles {
+      margin-right: 0;
+      margin-bottom: 48px;
+    }
+    &::before {
+      position: absolute;
+      @include flex($direction: column, $align: center, $justify: center);
+      content: ' ';
+      width: 76.3%;
+      height: 76.3%;
+      background: #5551ff;
+      border-radius: 50%;
+    }
+    &::after {
+      position: absolute;
+      @include flex($direction: column, $align: center, $justify: center);
+      content: 'soda';
+      width: 50.8%;
+      height: 50.8%;
+      background: #3530ff;
+      border-radius: 50%;
+      color: #ffa72b;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase;
+      @include tabletStyles {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__wrapper {
+    grid-area: B;
+
+    @include flex($direction: row, $align: $start, $justify: $start);
+    flex-wrap: wrap;
+    @include mobileStyles {
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
+  }
+
+  &__nav {
+    @include tabletStyles {
+      margin-left: 0;
+    }
+    @include mobileStyles {
+      margin: 0;
+    }
+  }
+
+  &__title-nav {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include mobileStyles {
+      @include flex($direction: column, $align: center, $justify: $start);
+    }
+  }
+
+  &__item {
+    margin: 0;
+    margin-bottom: 3px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-links {
+    color: $white;
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__contacts {
+    margin-left: 142px;
+    @include flex($direction: column, $align: $start, $justify: $start);
+    @include tabletStyles {
+      margin-left: 96px;
+      @include mobileStyles {
+        margin: 50px 0 50px;
+        align-items: center;
+      }
+    }
+  }
+  &__title-contacts {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 33px;
+  }
+
+  &__links-contacts {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    margin-bottom: 3px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__copy {
+    grid-area: C;
+    align-self: end;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    @include tabletStyles {
+      bottom: 50px;
+    }
+    @include mobileStyles {
+      align-self: center;
+    }
+  }
+}
