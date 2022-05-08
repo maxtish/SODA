@@ -1,0 +1,54 @@
+.button {
+  width: 163px;
+  background-color: $colorBackgroundButton;
+  border: none;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: $colorTextButton;
+  transition: 0.5s;
+  border: 2px solid $colorBackgroundButton;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+  padding: 10px 0;
+
+  &:hover {
+    border: 2px solid #1e3264;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  &_block_header {
+    @include mobileStyles {
+      width: 152px;
+      font-size: 16px;
+    }
+  }
+
+  &_block_taste {
+    grid-area: C;
+
+    @include tabletStyles {
+      margin-top: 100px;
+    }
+    @include mobileStyles {
+      margin-top: 60px;
+    }
+  }
+
+  &_block_samples {
+    width: 158px;
+    background: #a27bff;
+    color: $white;
+    border: 2px solid transparent;
+    @include mobileStyles {
+      width: 220px;
+      box-sizing: border-box;
+    }
+    &:hover {
+      border: 2px solid #e1fd2c;
+    }
+  }
+}
